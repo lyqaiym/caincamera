@@ -137,7 +137,8 @@ public class CameraPreviewPresenter extends PreviewPresenter<CameraPreviewFragme
 //        } else {
 //            mCameraController = new CameraController(mActivity);
 //        }
-        mCameraController = new CameraController(mActivity);
+//        mCameraController = new CameraController(mActivity);
+        mCameraController = new CameraXController(mActivity);
         mCameraController.setPreviewCallback(this);
         mCameraController.setOnFrameAvailableListener(this);
         mCameraController.setOnSurfaceTextureListener(this);

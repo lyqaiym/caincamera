@@ -1,2 +1,4 @@
+git clone https://aosp.tuna.tsinghua.edu.cn/platform/frameworks/support androidx
+git checkout -b id_45c0601f9b870d686d97faa4a1d6bfd3f7c55b75 45c0601f9b870d686d97faa4a1d6bfd3f7c55b75
 cp -r androidx/camera/camera-camera2/src camerax/camera-camera2
 cp -r androidx/camera/camera-core/src camerax/camera-core
