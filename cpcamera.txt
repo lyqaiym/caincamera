@@ -1,0 +1,2 @@
+cp -r androidx/camera/camera-camera2/src camerax/camera-camera2
+cp -r androidx/camera/camera-core/src camerax/camera-core
