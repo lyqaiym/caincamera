@@ -6,12 +6,12 @@ def platformVersion = 21    // 18: openGLES 3 min api level
 
 android {
     namespace 'com.cgfay.media'
-    compileSdkVersion 30
-    buildToolsVersion '30.0.2'
+    compileSdk = rootProject.ext.compileSdkVersion
+    ndkVersion = rootProject.ext.ndkVersion
 
     defaultConfig {
-        minSdkVersion "${platformVersion}"
-        targetSdkVersion 30
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -56,8 +56,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 

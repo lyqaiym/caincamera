@@ -6,8 +6,8 @@ android {
     buildToolsVersion '30.0.2'
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -29,8 +29,8 @@ android {
 //        }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
@@ -64,11 +64,15 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
 
     // CameraX core library
-    implementation "androidx.camera:camera-core:${camerax_version}"
+//    implementation "androidx.camera:camera-core:${camerax_version}"
+    implementation project(':camerax:camera-core')
     // CameraX Camera2 extensions
-    implementation "androidx.camera:camera-camera2:${camerax_version}"
+//    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    implementation project(':camerax:camera-camera2')
     // CameraX Lifecycle library
-    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+    implementation("androidx.camera:camera-lifecycle:$camerax_version"){
+        exclude group: 'androidx.camera'
+    }
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'

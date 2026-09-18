@@ -18,3 +18,5 @@ dependencyResolutionManagement {
 }
 include ':app', ':cameralibrary', ':facedetectlibrary', ':filterlibrary', ':videolibrary', ':gdxlibrary', ':widgetlibrary',
         ':landmarklibrary', ':pickerlibrary', ':imagelibrary', ':medialibrary', ':utilslibrary'
+include ':camerax:camera-core'
+include ':camerax:camera-camera2'

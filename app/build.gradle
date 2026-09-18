@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     namespace 'com.cgfay.caincamera'
-    compileSdkVersion 30
-    buildToolsVersion '30.0.2'
+    compileSdk = rootProject.ext.compileSdkVersion
+    ndkVersion = rootProject.ext.ndkVersion
 
     defaultConfig {
         applicationId "com.cgfay.caincamera"
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
         versionCode 2
         versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -29,8 +29,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     repositories {
