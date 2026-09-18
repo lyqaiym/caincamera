@@ -1,2 +1,20 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        flatDir {
+            dirs 'facedetectlibrary/libs'
+        }
+    }
+}
 include ':app', ':cameralibrary', ':facedetectlibrary', ':filterlibrary', ':videolibrary', ':gdxlibrary', ':widgetlibrary',
         ':landmarklibrary', ':pickerlibrary', ':imagelibrary', ':medialibrary', ':utilslibrary'

@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.cgfay.facedetectlibrary'
     compileSdkVersion 30
     buildToolsVersion '30.0.2'
 
@@ -23,9 +24,9 @@ android {
 
 
     repositories {
-        flatDir {
-            dirs 'libs'
-        }
+//        flatDir {
+//            dirs 'libs'
+//        }
     }
 
     compileOptions {

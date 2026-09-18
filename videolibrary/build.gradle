@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.cgfay.video'
     compileSdkVersion 30
     buildToolsVersion '30.0.2'
 
